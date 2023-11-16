@@ -1,0 +1,28 @@
+* {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+.page-user {
+  width: 80%;
+  margin: 1rem auto;
+}
+.user-main {
+  background: #f9e0ec;
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  float: left;
+  .user-content {
+    width: 70%;
+    background: olivedrab;
+    padding-left: 5rem;
+    h2 {
+      font-size: 2rem;
+    }
+    li {
+      margin: 2rem 0;
+    }
+  }
+}

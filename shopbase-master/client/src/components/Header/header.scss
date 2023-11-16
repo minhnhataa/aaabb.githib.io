@@ -1,0 +1,201 @@
+@import '../../scss/variables';
+
+.header{
+  width: 80%;
+  margin: 0 auto;
+  .header_row_1{
+    height: $navbar-app-height;
+    display: flex;
+    justify-content: space-between;
+    font-size: $app-font-size;
+    .row_left{
+      a{
+        text-decoration: none;
+        color: $app-main-text-color;
+        line-height: $navbar-app-height;       
+        &:focus{
+          color: $app-bg-color;
+        }
+        &:last-child {
+          margin-left: $spacebar;
+        }
+      }
+    }
+    .row_right{
+      a{
+        text-decoration: none;
+        color: $app-main-text-color;
+        line-height: $navbar-app-height;
+        &:focus{
+          color: $app-bg-color;
+        }
+        &:not(:last-child) {
+          margin-right: $spacebar;
+        }
+      }
+    }
+    
+  }
+  .header_row_2{
+    height: $navbar-app-height;
+    display: flex;
+    .row-2-logo{
+      flex: 20%;
+      img{
+        height: 40px;
+        transform: translateY(10%);
+      }
+    }
+    .dropdown {
+      flex: 20%;
+      display: grid;
+        p{
+          height: $navbar-app-height;
+          line-height: $navbar-app-height;
+          margin: 0 auto;
+          font-size: $app-font-size;
+          cursor: pointer;
+          i.fa-sort-down{
+            color: $app-main-text-color;
+            margin-left: 5px;
+            transform: translateY(-2px);
+          }
+        }
+        &:hover .dropdown-content {
+          display: block;
+        }
+        .dropdown-content {
+          display: none;
+          width: 50%;
+          padding: 12px 6px;
+          background-color: white;
+          margin: 0 auto;
+          border-radius: $border-radius;
+          position: relative;
+          box-shadow: 0 0 5px #cfcfcf;
+          a{
+            display: grid;
+            text-decoration: none;
+            padding: $gap 12px;
+            font-weight: normal;
+            font-size: $app-font-size;
+            color: $app-main-text-color;
+            &:hover{
+              background-color: $content-bg-color;
+              color: $app-bg-color;
+              position: relative;
+              font-weight: bold;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    .search-box{
+      flex: 54%;
+      display: flex;
+      justify-content: space-between;
+      margin: auto 0;
+      background-color: $app-bg-color;
+      border: 0.1px solid $app-bg-color;
+      border-radius: $border-radius;
+      input.search-txt{
+        flex: 70%;
+        height: 32px;
+        padding: 0 12px;
+        outline: none;
+        border: none;
+        border-radius: $border-radius;
+        border: 0.1px solid $app-bg-color;
+      }
+      button.search-btn{
+        width: 90px;
+        display: flex;
+        justify-content: space-around;
+        background-color: $app-bg-color;
+        margin: auto 0;
+        height: 32px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        align-items: center;
+        i.fa-search{
+          
+        }
+      }
+    }
+    .cart{
+      flex: 6%;
+      display: flex;
+      justify-content: flex-end;
+      text-decoration: none;
+      i.fa-shopping-cart{
+        display: flex;
+        color: $app-main-text-color;
+        line-height: $navbar-app-height;
+        cursor: pointer;
+        font-size: 25px;
+        p.corner{
+          color: white;
+          font-size: calc(#{$app-font-size + 1px});
+          background-color: $app-bg-color;
+          padding: 0 calc(#{$gap / 2});
+          height: 40%;
+          line-height: 18.5px;
+          border-radius: 50%;
+          &:hover{
+            transform: scale(1.05);
+            transition: 0.2s;
+          }
+        }
+        &:hover{
+          color: black;
+        }
+      }
+    }
+  }
+  .header_row_3{
+    display: flex;
+    justify-content: space-around;
+    a{
+      text-decoration: none;
+      line-height: 48px;
+      color: $app-bg-color;
+      font-size: $app-font-size;
+    }
+  }
+}
+@media screen and (max-width: 918px){
+  .header{
+    .header_row_2{
+      .dropdown{
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: $screen-md){
+  .header{
+    max-width: 1170px;
+    .header_row_2{
+      display: flex;
+      img{
+        flex: 10%;
+      }
+      .dropdown{
+        flex: 30%;
+        p{
+          margin-left: $spacebar;
+        }
+        .dropdown-content{
+          margin-left: $spacebar;
+        }
+      }
+      .search-box{
+        flex: 45%;
+      }
+      .cart{
+        flex: 15%;
+      }
+    }
+  }
+}

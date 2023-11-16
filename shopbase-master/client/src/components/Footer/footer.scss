@@ -1,0 +1,51 @@
+@import '../../scss/variables';
+
+.footer{
+  .footer-content{
+    display:flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin: calc(#{$spacebar} * 3) auto;
+    padding: $spacebar 0;
+    .customer-store-pay-follow{
+      display: grid;
+      padding: 0 $spacebar;
+    }
+    h6{
+      color: red;
+      font-size: calc(#{$app-font-size * 1.2});
+      margin-bottom:$spacebar;
+      color: darken($app-main-text-color, 15);
+      text-transform: uppercase;
+    }
+    a{
+      text-decoration:none;
+      font-size: calc(#{$app-font-size * 1.1});
+      color: $app-main-text-color;
+      margin-bottom: $spacebar;
+    }
+    .pay{
+      display: flex;
+      justify-content: space-between;
+      .pay-1{
+        display: grid;
+        width: 50%;
+      }
+      img{
+        width: 4rem;
+      }
+    }
+    i{
+      margin-right: $gap;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md){
+  .footer{
+    .footer-content{
+      max-width: 1170px;
+    }
+  }
+}
